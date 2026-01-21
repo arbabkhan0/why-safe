@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PrivateRoute from "./components/PrivateRoute";
 
 import Home from "./pages/Home";
 import UrlAnalyzer from "./pages/UrlAnalyzer";
@@ -16,9 +17,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/url" element={<UrlAnalyzer />} />
+
         <Route path="/message" element={<MessageAnalyzer />} />
+
         <Route path="/identity" element={<IdentityAnalyzer />} />
+
         <Route path="/qr" element={<QrAnalyzer />} />
       </Routes>
 

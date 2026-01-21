@@ -7,12 +7,15 @@
   0% {
     transform: translate(0px, 0px) scale(1);
   }
+
   33% {
     transform: translate(30px, -50px) scale(1.1);
   }
+
   66% {
     transform: translate(-20px, 20px) scale(0.9);
   }
+
   100% {
     transform: translate(0px, 0px) scale(1);
   }
@@ -28,4 +31,40 @@
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+
+/* Custom Entry Animation */
+@keyframes enter-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: enter-slide-up 0.5s ease-out forwards;
+}
+
+@keyframes cyber-dot {
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cyber-dot {
+  animation: cyber-dot 1.4s infinite ease-in-out;
 }
